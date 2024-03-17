@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, MaxLength, IsUUID } from 'class-validator'
+import { IsNotEmpty, IsString, MaxLength } from 'class-validator'
 
 export class CreateNoteDto {
   @MaxLength(100)
@@ -7,11 +7,5 @@ export class CreateNoteDto {
   title: string
 
   @IsString()
-  @IsNotEmpty()
   content: string
-
-  @IsUUID(4, { message: 'Invalid request' })
-  @IsString()
-  @IsNotEmpty()
-  user_id: string
 }

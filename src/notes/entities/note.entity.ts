@@ -19,10 +19,10 @@ export class Note extends Document {
   @Prop({ required: true })
   title: string
 
-  @Prop({ required: true })
+  @Prop({ default: '' })
   content: string
 
-  @Prop({ required: true })
+  @Prop()
   user_id: string
 }
 
